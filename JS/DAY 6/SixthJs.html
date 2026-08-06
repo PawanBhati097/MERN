@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr=["Ayush",10,20,30,true,undefined,null];
+        console.log(arr);
+
+        //loop
+        //array traversing
+        for(let i=0;i<arr.length;i++){
+            console.log(arr[i]);
+        } 
+         for(let s of arr){
+            console.log(s);
+        }
+        //functions: push,pop,shift & unshift
+        //push
+        arr.push(20);//add from the end
+        arr.pop();//removes one element from last
+        arr.shift();//remove one elemnt from starting
+        arr.unshift(9);//add at the starting 
+
+        console.log(arr);
+        
+        //splice
+        arr.splice(2,0,"Bhati");
+
+        console.log(arr);
+
+        let nums=[10,100,120,200,150,30,70,111];
+        nums.sort();//this is not good sorting : It happens because all the elements are converted into string. 
+
+        nums.sort((a,b)=>a-b);//ascending order 
+                console.log(nums);
+
+        nums.sort((a,b)=>b-a);//descending order 
+        console.log(nums);
+
+        // Method chaining: add multiple methods on a single chain
+        nums.sort((a,b)=>a-b).reverse();
+        console.log(nums);
+
+        // concat
+        nums=nums.concat("Ayush","Vaibhav");
+
+        let names=["Akash"];
+      nums=nums.concat(names);
+      console.log(nums);
+
+        //join :converts the array into the string
+        nums=nums.join("-");
+        console.log(nums);
+        //split
+        let toArr=nums.split("-");//string to array
+        console.log(toArr);
+        //slice
+        let arr1 = [1, 2, 3, 4, 5];
+        console.log(arr1.slice(1, 3));// [2, 3]
+        //includes
+        console.log(arr1.includes(2)); // true
+
+        //map:it is used to map all the elements . works like loop.but it only works on array
+        arr1.map((el)=>{
+            console.log(el+10);
+        })
+
+        //filter:It filter out the match elements into new array
+
+        let filtered=arr1.filter((el)=>el%2===0);
+        let filtere=arr1.filter((el)=>{//block scope
+           return el%2===0});
+        console.log(filtere);
+            //reduce(callback,acc): It reruns the single value of the array.Acc means it takes all the value and return as the result.
+         let sum=arr1.reduce((acc,el)=>{
+                return acc+el;
+            },0)  //15
+
+            //String
+            let name="Ayush"// 0 1 2 3 4
+        console.log(name.startsWith("A"));
+        console.log(name.endsWith("h"));
+        console.log(name.charAt(3)); // seraching based on index.
+        console.log(name.search("s"));
+
+        console.log(name.slice(0,3));
+        console.log(name.slice(2));
+
+        let name1="    Kumar     ";
+        console.log(name1.trim());
+        console.log(name1.trimStart());
+        console.log(name1.trimEnd());
+
+        let neName=name.toLowerCase();
+        console.log(neName);
+        console.log(neName.toUpperCase());
+
+        let firstName="Shubham";
+        let lastName="Agnihotri";
+        let fullname="";
+        // fullname.concat(firstName,lastName)
+
+        console.log(fullname.concat(firstName," ",lastName));
+
+        let newA=name.split("");
+        console.log(newA);
+
+        let details="Shubham-Noida-201102-JIIT";
+        console.log(details.split("-"));
+    </script>
+</body>
+</html>

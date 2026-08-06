@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box{
+        width: 400px;
+        height:400px;
+        border: 2px solid black;
+    }
+</style>
+<body>
+    <div class="box">
+
+    </div>
+    <script>
+        //Call Stack
+        // function one(){
+        //     return 1;
+        // }
+        // function two(){
+        //     return one()+one();
+        // }
+        // function three(){
+        //     return two()+one();
+        // }
+        // three();
+
+        // Synchronous
+        // console.log("Hello")
+        // console.log("Hi")
+        // for(let i=0;i<=5;i++){
+        //     console.log(i);
+        // }
+        // console.log("loop ended")
+
+        //Asynchronous
+        // seTimeout(callback,time),setInterval(callback,time)
+
+        //This nature is Asynchronous Programming.
+        // setTimeout(()=>{
+        //     console.log("Set timeout code");
+        // },3000) //execute after given time, this code is handled by the browser
+
+        // let interval=setInterval(()=>{
+        //     console.log("Set Interval");
+        // },3000)
+        // setTimeout(()=>{
+        //     clearInterval(interval)
+        // },18000)
+
+        // let box=document.querySelector(".box");
+        // setTimeout(()=>{
+        //     box.style.backgroundColor="red";
+        // },3000)
+        // setTimeout(()=>{
+        //     box.style.backgroundColor="yellow";
+        // },5000)
+
+        //CallBack hell
+        // let box=document.querySelector(".box");
+        // function colorChange(color,delay,nextColor){
+        //     setTimeout(()=>{
+        //         if(nextColor) nextColor();
+        //      box.style.backgroundColor=color;
+        //     },delay)
+        // }//not a good code
+        // colorChange("red",3000,()=>{
+        //     colorChange("yellow",3000,()=>{
+        //         colorChange("green",3000)
+        //     })
+        // });
+
+        //data save krna h on our db,but data save depebds upon the network connection,internet spped>4(save),reject
+
+        function saveToDb(data,resolve,reject){
+            let speed=Math.ceil(Math.random()*10)//1 to 10 number creation
+            if(speed>4){
+                resolve()
+            }
+            else{
+                reject()
+            }
+        }
+        saveToDb("Bhati",(s)=>{
+            console.log("Data 1 saved",s);
+            saveToDb("Ram",(s)=>{
+                console.log("Data 2 saved",s)
+            saveToDb("ShriRam",(s)=>{
+                console.log("Data 3 saved",s)
+            },(e)=>{
+                console.log("Less speed",e)
+            })
+            },(e)=>{
+                console.log("Less speed",e)
+            })
+        },(e)=>{
+            console.log("Less Speed",e)
+        })
+        </script>
+</body>
+</html>

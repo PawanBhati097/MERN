@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="myPara">This is a paragraph with classes</p>
+    <button id="toggleBtn">Toggle Class</button>
+
+    <style>
+        .highlight {
+            background-color: yellow;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .hidden {
+            display: none;
+        }
+    </style>
+
+    <script>
+        let para = document.getElementById("myPara")
+        let btn = document.getElementById("toggleBtn")
+        
+        // Add class
+        para.classList.add("highlight")
+        console.log("Added highlight class")
+        
+        // Check if class exists
+        console.log("Has highlight?", para.classList.contains("highlight"))
+        
+        // Toggle class on button click
+        btn.addEventListener("click", function() {
+            para.classList.toggle("highlight")
+            console.log("Toggled highlight")
+        })
+    </script>
+</body>
+</html>

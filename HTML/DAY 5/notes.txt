@@ -1,0 +1,14 @@
+Form tag--> input,select,option----etc
+Mainly used for registration form,login in , sign up form.
+
+label tag--> define a text label for an input field.
+
+placeholder-->show hint text inside an input filed before typing.
+
+input tag --> creates an input field for user data.
+
+input type=radio for single select ,checkbox for multiple select, submit for form submit, reset for form reset.
+
+text area tag: for creating multi line textarea.
+
+select tag for creating a dropdown list.

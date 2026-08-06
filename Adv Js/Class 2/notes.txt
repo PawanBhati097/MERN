@@ -1,0 +1,19 @@
+Promises: It is an asynchronous process
+Promise has three nature: 
+    --->Resolve
+    --->Reject
+    --->Pending
+    Whenever their is promise always use : then & catch method for handling.
+
+    async & await
+
+    async & await
+        What is async?
+        is convert any function into promise
+        What is await ?
+        it is used to handle the promises.
+
+        But await is only use when we use async at top level
+
+        What is API ?(Application programmming interface)
+         GET ,POST,PUT,PATCH,DELETE

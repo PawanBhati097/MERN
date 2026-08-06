@@ -1,0 +1,43 @@
+COntrol-Flow Statement : Loop
+Iteration on a condition until it turns out to be false.
+3 types of loops :
+i. for
+    syntax
+    for(start;stop;step){code}
+    
+ii. while
+    syntax
+    start;
+    while(stop){
+        code
+        step;
+    }
+
+iii. do-while
+    syntax
+    start;
+    do{
+        code
+        step;
+    }while(condition);
+
+iv. for-of
+    syntax
+    for(temp variable of string/array){
+        operation
+    }    
+
+Functions : It is a block of code , which we can re-use when we want.
+Syntax:
+    function func_name(){  //define and declare
+        code
+    }
+    func_name() //call
+    Tpyes of function:
+                        1.normal function
+                        2.parameter and argument function
+                        3.returning function
+                        4.default function
+                        5.function expression
+                        6.arrow function
+

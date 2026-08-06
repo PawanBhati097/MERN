@@ -1,0 +1,21 @@
+If you want see whole page : document
+
+How we can access any HTML element in our JS?
+To access HTMl in JS we have three methods:
+--> getElementById()
+--> getElementByClassName()
+--> getElementByTagName()
+
+--> querySelector(.classname/#idname/tagname) : It only access one element 
+--> querySelectorAll(.classname/#idname/tagname) : It makes the node list
+
+How we can edit the text of particular element?
+--> innerText
+--> innerHTML
+
+How we can add the styling to our HTML element?
+.style.propertyName()
+
+getter & setter : getAttribute() & setAttribute()
+
+classList() : add , remove , contains , toggle

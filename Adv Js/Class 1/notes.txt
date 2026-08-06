@@ -1,0 +1,9 @@
+Call Stack
+Synchronous & Asynchronous
+Synchronous:Executing code line by line
+Asynchronous:It means their is some wait time in the code. //setTimeout,//setInterval
+What is callBack ?
+Function inside another function waiting for execution
+Is Js single threaded or multi-threaded?
+Js is single threade as i handles only the synchronous code.(Asynchronous code is handled by the browser).
+CallBack hell:

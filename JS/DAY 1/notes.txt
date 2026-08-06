@@ -1,0 +1,13 @@
+JS it stands for Javascript.
+It is both programming & scripting langauge.
+
+UI development : JS
+
+Interview :
+    Round 1 : JS (core js)
+    Round 2 : Adv JS , React & Scenario Based Question
+
+Js are of three types:
+--> Inline : In the html tag itself.
+--> Internal : In the html file itself
+--> External : Additional file of JS

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Learning DOM</title>
+</head>
+<body>
+    <h1 id="heading">Hello World</h1>
+    <p class="text">This is a paragraph</p>
+    <p class="text">This is another paragraph</p>
+    
+    <button id="myButton">Click Me</button>
+
+    <script>
+    // // Access by ID
+    // let heading = document.getElementById("heading")
+    // console.log("Heading:", heading)
+    
+    // // Access by Class
+    // let paragraphs = document.getElementsByClassName("text")
+    // console.log("Paragraphs:", paragraphs)
+    
+    // // Access by Tag
+    // let allP = document.getElementsByTagName("p")
+    // console.log("All P tags:", allP)
+
+    // // Change text
+    // let heading = document.getElementById("heading")
+    // heading.innerText = "I changed this text!"
+    
+    // let para = document.querySelector(".text")
+    // para.innerText = "I changed paragraph text!"
+
+    // let heading = document.getElementById("heading")
+    // heading.style.color = "red"
+    // heading.style.fontSize = "50px"
+    
+    // let para = document.querySelector(".text")
+    // para.style.backgroundColor = "yellow"
+    // para.style.padding = "20px"
+
+
+    // Create new element
+    let newH2 = document.createElement("h2")
+    newH2.innerText = "I am a new heading!"
+    
+    // Add to body
+    let body = document.querySelector("body")
+    body.append(newH2)  // Adds at the end
+    
+    // Add at the beginning
+    let newP = document.createElement("p")
+    newP.innerText = "I am at the beginning!"
+    body.prepend(newP)
+
+    // // <script> 
+    // let button = document.getElementById("myButton")
+    
+    // button.addEventListener("click", function() {
+    //     alert("Button was clicked!")
+    //     console.log("Button clicked!")
+    // })
+
+    let button = document.getElementById("myButton")
+    let heading = document.getElementById("heading")
+    
+    button.addEventListener("click", function() {
+        heading.innerText = "You clicked the button!"
+        heading.style.color = "blue"
+    })
+</script>
+</body>
+</html>

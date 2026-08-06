@@ -1,0 +1,11 @@
+What is List?
+List are of teo types:
+1. Ordered List: which have some order like:A,a,1,i,i
+This is denoted by ol triangle
+
+2.Unordered List: Which doesnt have any order : Square, Circle,disk,triangle,etc
+This is denoted by ul triangle
+
+List item is denoted by li tag.
+
+shortcut for multiple li*n number.

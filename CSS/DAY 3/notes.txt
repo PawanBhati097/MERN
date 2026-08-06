@@ -1,0 +1,10 @@
+Box Model
+
+Positions:
+            Static: We cannot move this object.
+            Absolute :In this position it leaves his space and move from its parent position.
+            Relative:In this position it move from its own space.
+            Fixed: In this it leaves his space and fix at one place.
+            Sticky
+
+UI design

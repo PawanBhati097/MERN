@@ -1,0 +1,24 @@
+Font
+  --> Font-family://example: times new roman
+  --> Font-size://ex: 3rem  1rem=16px(cover on screen)
+  --> Font-weight:// bold 
+  --> Font-style: //italic  
+  Note: If we want to import font from google fonts: then we select it from google fonts and then get font and then get embed code and then selct properties
+
+
+Backgrounds: 
+            -->background image: url(./html.png)
+                background-repeat: no repeat;
+                background-position:center;
+                background-size:contain;
+
+In our html we two types of tags:
+    Inline tag: It means where it contain only limited space.
+    Block tag: It means it contain whole line space.
+
+Display: its of 5 types
+        inline:
+        inline-blocks:
+        block:
+        flex:
+        grid:

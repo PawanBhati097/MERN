@@ -1,0 +1,244 @@
+DOM MANIPULATION - COMPLETE NOTES
+1. ACCESSING ELEMENTS
+javascript
+// By ID (returns single element)
+document.getElementById("idName")
+
+// By Class (returns HTML Collection - all elements with class)
+document.getElementsByClassName("className")
+
+// By Tag (returns HTML Collection - all elements with tag)
+document.getElementsByTagName("tagName")
+
+// Modern ways (recommended)
+document.querySelector(".class")      // Returns FIRST match
+document.querySelector("#id")         // Returns FIRST match
+document.querySelector("tag")         // Returns FIRST match
+
+document.querySelectorAll(".class")   // Returns ALL matches (NodeList)
+document.querySelectorAll("#id")      // Returns ALL matches (NodeList)
+document.querySelectorAll("tag")      // Returns ALL matches (NodeList)
+2. CHANGING TEXT
+javascript
+element.innerText = "New text"        // Changes visible text only
+element.innerHTML = "<b>Bold</b>"     // Changes HTML content (can include tags)
+3. ADDING STYLES
+javascript
+element.style.color = "red"           // Changes text color
+element.style.fontSize = "50px"       // Changes font size
+element.style.backgroundColor = "yellow" // Changes background color
+element.style.padding = "20px"        // Adds padding
+Note: Use camelCase for CSS properties
+
+background-color → backgroundColor
+
+font-size → fontSize
+
+margin-top → marginTop
+
+4. CREATING ELEMENTS
+javascript
+document.createElement("h1")          // Creates <h1></h1>
+document.createElement("p")           // Creates <p></p>
+document.createElement("div")         // Creates <div></div>
+5. ADDING ELEMENTS TO PAGE
+javascript
+parent.append(child)                  // Adds at END inside parent
+parent.prepend(child)                 // Adds at START inside parent
+
+// Insert at specific positions
+element.insertAdjacentElement("beforebegin", newElement)  // Before element
+element.insertAdjacentElement("afterbegin", newElement)   // Inside, at top
+element.insertAdjacentElement("beforeend", newElement)    // Inside, at bottom
+element.insertAdjacentElement("afterend", newElement)     // After element
+Visual:
+
+text
+[beforebegin]  → Before the element
+  <element>
+    [afterbegin] → Inside at top
+    Content
+    [beforeend]  → Inside at bottom
+  </element>
+[afterend]     → After the element
+6. EVENT LISTENERS
+javascript
+element.addEventListener("click", function() {
+    // Code runs when clicked
+})
+
+// Common events
+click          // When element is clicked
+dblclick       // When double clicked
+submit         // When form is submitted
+change         // When input value changes
+mouseover      // When mouse hovers over
+mouseout       // When mouse leaves
+keydown        // When key is pressed
+keyup          // When key is released
+7. WORKING WITH INPUT
+javascript
+input.value                           // Gets what user typed
+input.value = "Hello"                 // Sets value
+
+// Listen for changes
+input.addEventListener("input", function(e) {
+    console.log(e.target.value)       // Shows on every keystroke
+})
+
+input.addEventListener("change", function(e) {
+    console.log(e.target.value)       // Shows when focus lost
+})
+8. FORM HANDLING
+javascript
+form.addEventListener("submit", function(e) {
+    e.preventDefault()                // Stops page refresh
+    
+    let data = {
+        name: inputName.value,
+        email: inputEmail.value
+    }
+    console.log(data)                 // {name: "John", email: "john@email.com"}
+})
+Note: Form automatically refreshes page. Use preventDefault() to stop it.
+
+9. classList METHODS
+javascript
+element.classList.add("className")       // Add a class
+element.classList.remove("className")    // Remove a class
+element.classList.contains("className")  // Check if exists (true/false)
+element.classList.toggle("className")    // Add if missing, remove if present
+10. GETTER & SETTER
+javascript
+element.getAttribute("id")               // Get attribute value
+element.setAttribute("class", "newClass") // Set attribute value
+HTML TAGS REFERENCE
+Section Tags
+text
+<html>       Defines root of HTML document
+<head>       Contains meta information about document
+<body>       Contains visible page content
+<title>      Sets title of webpage (shown in browser tab)
+Text Formatting Tags
+text
+<h1> to <h6>   Headings (h1 largest, h6 smallest)
+<p>            Paragraph
+<b>            Bold text
+<strong>       Important text (bold)
+<i>            Italic text
+<em>           Emphasized text (italic)
+<u>            Underlined text
+<br>           Line break (single line)
+<hr>           Horizontal line
+<pre>          Preformatted text
+Link & Image Tags
+text
+<a>            Hyperlink
+<img>          Image
+List Tags
+text
+<ul>           Unordered list (bullets)
+<ol>           Ordered list (numbers)
+<li>           List item
+Table Tags
+text
+<table>        Table
+<tr>           Table row
+<td>           Table data/cell
+<th>           Table header
+Form Tags
+text
+<form>         Form container
+<input>        Input field (text, password, email, etc.)
+<label>        Label for form element
+<button>       Button
+<select>       Dropdown list
+<option>       Option in dropdown
+<textarea>     Multi-line text input
+<fieldset>     Group related form elements
+<legend>       Caption for fieldset
+Container Tags
+text
+<div>          Division (block container)
+<span>         Inline container
+<header>       Header section
+<footer>       Footer section
+<nav>          Navigation
+<section>      Section
+<article>      Article
+<aside>        Side content
+<main>         Main content
+Media Tags
+text
+<video>        Video player
+<audio>        Audio player
+<source>       Media source
+<iframe>       Embed external content
+QUICK REFERENCE TABLE
+Action	Method	Example
+Get by ID	getElementById()	document.getElementById("myId")
+Get by Class	getElementsByClassName()	document.getElementsByClassName("myClass")
+Get by Tag	getElementsByTagName()	document.getElementsByTagName("p")
+Get First Match	querySelector()	document.querySelector(".class")
+Get All Matches	querySelectorAll()	document.querySelectorAll(".class")
+Change Text	innerText	element.innerText = "Hi"
+Change HTML	innerHTML	element.innerHTML = "<b>Hi</b>"
+Add Style	style.property	element.style.color = "red"
+Create Element	createElement()	document.createElement("div")
+Add at End	append()	parent.append(child)
+Add at Start	prepend()	parent.prepend(child)
+Add Event	addEventListener()	element.addEventListener("click", fn)
+Get Input	value	input.value
+Stop Refresh	preventDefault()	e.preventDefault()
+Add Class	classList.add()	element.classList.add("active")
+Remove Class	classList.remove()	element.classList.remove("active")
+Toggle Class	classList.toggle()	element.classList.toggle("active")
+EXAMPLE: PUTTING IT ALL TOGETHER
+html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Page</title>
+</head>
+<body>
+    <h1 id="title">Hello</h1>
+    <p class="para">First paragraph</p>
+    <p class="para">Second paragraph</p>
+    <input type="text" id="nameInput" placeholder="Enter name">
+    <button id="btn">Submit</button>
+
+    <script>
+        // Access elements
+        let title = document.getElementById("title")
+        let paras = document.querySelectorAll(".para")
+        let input = document.getElementById("nameInput")
+        let button = document.getElementById("btn")
+        
+        // Change content
+        title.innerText = "New Title"
+        paras.forEach(p => p.style.color = "blue")
+        
+        // Event listener
+        button.addEventListener("click", function() {
+            alert("Hello, " + input.value)
+        })
+    </script>
+</body>
+</html>
+KEY POINTS TO REMEMBER
+ID must be unique → use getElementById()
+
+Class can be multiple → use getElementsByClassName() or querySelectorAll()
+
+querySelector() returns FIRST match only
+
+querySelectorAll() returns ALL matches
+
+Use preventDefault() to stop form refresh
+
+CSS properties in JS use camelCase
+
+append() adds at end, prepend() adds at start
+
+innerText for text only, innerHTML for HTML content
+

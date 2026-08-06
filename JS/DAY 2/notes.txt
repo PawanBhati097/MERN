@@ -1,0 +1,30 @@
+Chapter 1: Variable,Data types,User Input & Type casting
+
+What is Variable?
+It is a container that stores some value at the memory.
+
+What is let var & const ?
+
+These are the keywords that are use to create the variable.
+
+What is hoisting in javascript ?
+Hoisting is a JavaScript mechanism where variable, function, and class declarations are conceptually moved to the top of their containing scope during the compilation phase, before the code actually executes. This means you can reference or use functions and variables before the lines of code where they are formally defined.
+
+What ia data type?
+Which type of data is stored in a variable.
+primitive   
+             .number (int & float)
+             .string (Inside " ")
+             .boolean ( true or false)
+             .undefined
+             .null : object
+
+What is user input ?
+Taking input from the user
+prompt() : it store data in string 
+
+Type Casting:
+Changing the data type of a variable
+ParseInt()
+parseFloat()
+

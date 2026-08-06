@@ -1,0 +1,70 @@
+DOM MANIPULATION NOTES
+Accessing HTML Elements
+Traditional Methods:
+
+text
+document.getElementById("idName")              // Returns single element by ID
+document.getElementsByClassName("className")   // Returns HTML Collection by class
+document.getElementsByTagName("tagName")       // Returns HTML Collection by tag
+Modern Methods (Recommended):
+
+text
+document.querySelector(".class/#id/tag")       // Returns FIRST matching element
+document.querySelectorAll(".class/#id/tag")    // Returns ALL matches (NodeList)
+Editing Text Content
+text
+element.innerText = "New text"                 // Sets visible text only
+element.innerHTML = "<b>Bold</b>"              // Sets HTML content (can include tags)
+Adding Styles
+text
+element.style.color = "red"                    // camelCase property names
+element.style.fontSize = "20px"                // background-color → backgroundColor
+element.style.backgroundColor = "blue"         // font-size → fontSize
+Getter & Setter Methods
+text
+element.getAttribute("id")                     // Gets attribute value
+element.setAttribute("class", "newClass")      // Sets attribute value
+classList Methods
+text
+element.classList.add("className")             // Add a class
+element.classList.remove("className")          // Remove a class
+element.classList.contains("className")        // Check if class exists (true/false)
+element.classList.toggle("className")          // Toggle class on/off
+Quick Reference
+Method	Purpose	Example
+getElementById()	Get element by ID	document.getElementById("myId")
+getElementsByClassName()	Get elements by class	document.getElementsByClassName("myClass")
+getElementsByTagName()	Get elements by tag	document.getElementsByTagName("p")
+querySelector()	Get first match	document.querySelector(".myClass")
+querySelectorAll()	Get all matches	document.querySelectorAll(".myClass")
+innerText	Set/get text	element.innerText = "Hello"
+innerHTML	Set/get HTML	element.innerHTML = "<b>Hi</b>"
+.style.property	Add CSS	element.style.color = "red"
+getAttribute()	Get attribute	element.getAttribute("class")
+setAttribute()	Set attribute	element.setAttribute("id", "newId")
+classList.add()	Add class	element.classList.add("active")
+classList.remove()	Remove class	element.classList.remove("active")
+classList.contains()	Check class	element.classList.contains("active")
+classList.toggle()	Toggle class	element.classList.toggle("active")
+NodeList vs HTMLCollection
+text
+querySelectorAll() → NodeList (static, can use forEach)
+getElementsByClassName() → HTMLCollection (live, convert to array for forEach)
+Example:
+
+text
+// NodeList - direct forEach
+document.querySelectorAll(".class").forEach(el => { el.style.color = "red" })
+
+// HTMLCollection - convert to array first
+Array.from(document.getElementsByClassName("class")).forEach(el => { el.style.color = "red" })
+Important Notes
+IDs must be UNIQUE in HTML
+
+querySelector returns only FIRST match
+
+querySelectorAll returns ALL matches
+
+Use camelCase for CSS properties in JS (backgroundColor, fontSize)
+
+innerHTML can execute scripts (security risk) - prefer innerText for plain text

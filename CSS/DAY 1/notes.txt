@@ -1,0 +1,24 @@
+CSS:Cascading StyleSheet
+
+Css is of three tyes:
+    Inline : Here we write css within Html tag
+    Internal : Here we write css in within html file using Style tag.
+    External :Here we have to create an external ccs file and link with our html file.
+
+Selector of CSS:
+    4 types:
+    a. Universal which is denoted by *.(Applicable on whole body)
+    b. id which is denoted by # (Used only one time technically. we csn ude it multiple times but we should not.)
+    c. class which is denoted by . (create one class and use it multiple times)
+    d. tag which is denoted by tagname.
+
+
+Border Property
+    width
+    Style
+    color
+
+    border-curveness : border-radius{
+        border-top-radius ,,etc. //work clockwise
+    }
+Font Property

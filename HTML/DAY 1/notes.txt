@@ -1,0 +1,19 @@
+To create a html file we use .html extension
+
+Bolierplate (html structure) : Shift + 1 and then enter
+
+What is meta tags ?
+Meta tags has three use cases :
+---> It is used to encode html to the browser.
+---> It is used for SEO (Search Engine Optimization).
+---> For responsiveness (for laptop--tablet--phone)
+easily edjustable.
+
+Whenever you are adding any image audio or video in your page always save it oin your folder.
+
+How we can add any icon to our title ?
+ We use link tag.(<link rel="icon" href="html.png">)
+
+For coming outside the folder we use ../
+
+

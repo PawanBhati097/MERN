@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="title">My Todo List</h1>
+    
+    <input type="text" id="todoInput" placeholder="Add a task...">
+    <button id="addBtn">Add Task</button>
+    
+    <ul id="todoList"></ul>
+
+    <script>
+        let input = document.getElementById("todoInput")
+        let addBtn = document.getElementById("addBtn")
+        let list = document.getElementById("todoList")
+        
+        addBtn.addEventListener("click", function() {
+            let task = input.value
+            
+            if(task === "") {
+                alert("Please enter a task!")
+                return
+            }
+            
+            // Create new list item
+            let li = document.createElement("li")
+            li.innerText = task
+            
+            // Add click to remove task
+            li.addEventListener("click", function() {
+                li.remove()
+                console.log("Task removed:", task)
+            })
+            
+            // Add to list
+            list.append(li)
+            
+            // Clear input
+            input.value = ""
+            
+            console.log("Task added:", task)
+        })
+    </script>
+</body>
+</html>

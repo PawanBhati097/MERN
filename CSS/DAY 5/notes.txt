@@ -1,0 +1,2 @@
+flex: gap,justify-content, flex properties,align item center,justify-content:space between,flex-wrap:wrap;
+

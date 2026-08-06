@@ -1,0 +1,22 @@
+What is operators ?
+operation between two or more operands is known as operators.
+
+Type of operators:
+    i.Arithmetic : +,-,*,/,%,**
+    ii.Relational: <,>,<=,>=,!=,==,===(Only in JS)
+        What is the difference between == and ===?
+
+    iii.Logical: &&(and) || (or) !(not)
+        &&:Here all the conditions must be true,if single condition is false then result will be false. EX- username and password
+
+        || :Here if one condition is true then it will return true. Ex-Fingerprint in a mobile
+
+        ! : reverse the answer
+
+    iv.Unary : preand post
+        Increment : a++,++a
+        Decrement :a--,--a
+
+    v.Assignment : =,+=,*=/=,%=,**=
+    vi.Ternary : Conditional based
+    (condition)? statemeni if true:statement if false;

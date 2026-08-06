@@ -1,0 +1,8 @@
+animation:name,durstion,timing function,count.
+
+Media query:used for responsive design.
+Breakpoints:
+i.1480px to above (15 inch laptop and above)
+ii.1260px to 1497px
+iii.960px to 1259px
+iv.540px to 959px

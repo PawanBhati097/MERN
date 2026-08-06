@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .color{
+        color: green;
+    }
+
+    .bg{
+        background-color: black;
+    }
+
+    .font{
+        font-size: 3rem;
+        font-weight: bolder;
+        text-align: center;
+    }
+</style>
+<body>
+    <h1 id="unique">Hello Everyone</h1>
+    <h1 id="unique" class="new">Hello Everyone</h1>
+    <h1 id="unique" class="new">Hello </h1>
+
+    <p class="color bg">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed dolorem natus architecto dolorum laudantium magnam dolores, accusamus iste iusto cum dolore? Eius possimus distinctio voluptatem dolore velit expedita. Neque est consectetur dolorem odit mollitia? Atque deleniti pariatur saepe accusamus odit at ex dolores quia tempora expedita minima blanditiis consequatur eius repudiandae, laborum perspiciatis et ullam ducimus aspernatur, cumque fugiat repellendus facilis. Veritatis illum mollitia nulla velit iure suscipit dolores maiores libero consectetur? Dolore minus quibusdam debitis optio fuga quod, odit atque. Voluptatem, vero! Similique tempora, deleniti harum laudantium perferendis quibusdam voluptates, odio nemo omnis nam suscipit iure! Earum, inventore delectus!
+    </p>
+
+    <script>
+          // DOM : Document Object Model
+        // let unique=document.getElementById("unique")
+        // console.log(unique)
+        
+        // let classEl=document.getElementsByClassName("new")
+        // console.log(classEl)
+
+        // let tagname=document.getElementsByTagName("p")
+        // console.log(tagname)
+
+        //   let tag=document.querySelector("h1")
+        // let c=document.querySelector(".new")
+        // let i=document.querySelector("#unique")
+        // console.log(tag)
+        // console.log(c)
+        // console.log(i)
+
+        // let all=document.querySelectorAll("#unique")
+        // console.log(all)
+
+        let para=document.querySelector("p")
+
+        // para.innerText="<b>Ayush</b>" // read tag as a text
+        // para.innerHTML="<b>Ayush</b>" // read html as a html & text as a text.
+
+        // para.style.backgroundColor="red"
+        // para.style.padding="50px"
+        // para.style.fontSize="3rem"
+        // para.style.color="white"
+        // para.style.textAlign="center"
+
+        //  console.log(para.getAttribute("style")) // we get the attribute value of p tag.
+
+        //   para.setAttribute("style","color:red") // here it overlaps all the old properties
+
+           // para.setAttribute("class","font")
+        
+        console.log("Initial classes:", para.className);  // "color bg"
+        
+        para.classList.add("font");
+        console.log("After add:", para.className);  // "color bg font"
+        
+        para.classList.remove("bg");
+        console.log("After remove:", para.className);  // "color font"
+        
+        console.log("Contains 'bg'?", para.classList.contains("bg"));  // false
+        
+        para.classList.toggle("bg");
+        console.log("After toggle 1:", para.className);  // "color font bg"
+        
+        para.classList.toggle("bg");
+        console.log("After toggle 2:", para.className);  // "color font"
+        
+        para.classList.toggle("bg");
+        console.log("After toggle 3:", para.className);  // "color font bg"
+    </script>
+</body>
+</html>

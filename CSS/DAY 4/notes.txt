@@ -1,0 +1,11 @@
+Hover Property:
+        When we point the mouse to any element and it shows some change then it called hover property.
+        
+Transition Property :to add time or give some delay
+
+Transform Property:
+
+Flex:Works on 1 dimensional basis on a single row
+Grid: Works on 2D       
+
+Flex: gap,justify-content,flexproperties

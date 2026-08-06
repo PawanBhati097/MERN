@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="myForm">
+        <input type="text" id="email" placeholder="Enter email">
+        <input type="submit" value="Submit Form">
+    </form>
+    <h3 id="result"></h3>
+
+    <script>
+        let form = document.getElementById("myForm")
+        let emailInput = document.getElementById("email")
+        let result = document.getElementById("result")
+        
+        form.addEventListener("submit", function(e) {
+            e.preventDefault()  // Prevents page refresh
+            
+            let email = emailInput.value
+            result.innerText = "Email submitted: " + email
+            console.log("Form submitted with:", email)
+        })
+    </script>
+</body>
+</html>

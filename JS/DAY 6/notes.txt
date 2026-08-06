@@ -1,0 +1,49 @@
+What is Array?
+It ia first data structure
+Here data is stored in contiguous memory allocation.
+
+Array is stored in [] , can store any type of values.
+It is based on zero based indexing.
+
+Array methods:
+
+push
+pop
+shift
+unshift
+
+In 2-D array , [row][column]
+
+splice : it is all-rounder add & remove at the same time.
+(start,no.of.delete,elementstoadd)
+
+slice()
+includes()
+concat()
+join()
+sort()
+reverse()
+split()
+
+Adv Methods: map˘(callback),filter(callback),reduce(callback),spread(callback),rest(callback),some(callback),every(callback),find(callback)
+
+What is callback ?
+callback is a function inside any other function waiting for execution
+
+String
+Any charcter inside the "" is a string, It is based on zero based indexing.
+
+It start from zero  &  goest to length - 1.
+
+String Functions:
+
+startsWith()
+endsWith()
+charAt()
+search()
+slice(start,end-1) : Most Important.
+trim(): trimStart(),trimEnd()
+toLowerCase()
+toUpperCase()
+concat()
+split()

@@ -1,0 +1,22 @@
+How we create the HTML element?
+createElement("tagname");
+
+How we can insert the HTML element?
+append
+prepend
+appendchild
+insertAdjacentElement : afterbegin,beforebegin,afterend,beforeend
+
+What is event listener?
+addEventListener(event,callback)
+
+Events : click, dblclick, submit, hover
+Callback: A function inside anthor function waiting for execution.
+
+How to handle the input tag?
+input . value
+
+{fname: value , lname:value , cname: value};
+
+Form turant referesh kartaa h.
+Toh isko rokna ka lia : preventDefault()

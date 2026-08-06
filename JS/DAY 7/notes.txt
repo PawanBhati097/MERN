@@ -1,0 +1,21 @@
+Objects
+
+What is object?
+In object data is stored in key value pair.
+
+{ key : value }
+
+It is in unstructured manner.
+
+ 
+How we can acces any key in the object?
+Method 1 : []
+Method 2 : .keyName
+
+How we can add any key in our obj?
+objName.keyName="Value"
+
+If their is any matching key , so it will get updated otherwise it will get add.
+
+Array of Objects.
+JSON DATA : Javascript object notation 

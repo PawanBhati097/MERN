@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            border: 2px solid black;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <button onclick="fetchFact()">
+        Generate fact
+    </button>
+    <main></main>
+    
+    <script>
+        // ============================================
+        // PART 1: PROMISE EXAMPLE (Commented)
+        // ============================================
+        // function saveToDb(data){
+        //     return new Promise((res, rej) => {
+        //         let speed = Math.ceil(Math.random() * 10); // 1 to 10 number creation
+        //         if(speed > 4){
+        //             res(speed);
+        //         } else {
+        //             rej(speed);
+        //         }
+        //     });
+        // }
+        
+        // // Whenever there is promise always use: then & catch method for handling.
+        // saveToDb("Ritik")
+        // .then((response) => { // every success one then
+        //     console.log("Data 1 Saves", response);
+        //     return saveToDb("Ansh");
+        // })
+        // .then((response) => {
+        //     console.log("Data 2 Saves", response);
+        // })
+        // .catch((err) => { // it is only used single time, running for all the then
+        //     console.log("Less internet speed", err);
+        // });
+
+        // ============================================
+        // PART 2: ASYNC/AWAIT EXAMPLE (Commented)
+        // ============================================
+        // let box = document.querySelector(".box");
+        
+        // function colorChange(color, delay) {
+        //     return new Promise((res, rej) => {
+        //         setTimeout(() => {
+        //             box.style.backgroundColor = color;
+        //             res();
+        //         }, delay);
+        //     });
+        // }
+        
+        // async function allColors() {
+        //     await colorChange("red", 3000);
+        //     await colorChange("yellow", 3000);
+        //     await colorChange("green", 3000);
+        //     await colorChange("black", 3000);
+        // }
+        
+        // allColors();
+
+        // ============================================
+        // PART 3: API FETCH EXAMPLE (ACTIVE)
+        // ============================================
+        // What is API? (Application Programming Interface)
+        // GET, POST, PUT, PATCH, DELETE
+        
+        let main = document.querySelector("main");
+        // let url = "https://jsonplaceholder.typicode.com/posts";
+        
+        // fetch(url) // It is used to fetch any API data.
+        // .then((res) => {
+        //     console.log(res);
+        //     return res.json(); // data ko json mein convert kra, aur json() bhi ek promise hai
+        // })
+        // .then((data) => {
+        //     console.log(data);
+            
+        //     // Loop through all posts and display them
+        //     for(let i = 0; i < data.length; i++) {
+        //         let heading = document.createElement("h1");
+        //         heading.innerText = `${data[i].id}. ${data[i].title}`;
+        //         main.append(heading);
+        //     }
+        // })
+        // .catch((err) => {
+        //     console.log("Error:", err);
+        // });
+
+        let url="https://catfact.ninja/fact"
+       async function fetchFact(){
+            let fact=await fetch(url)
+            let data=await fact.json() //object 
+
+            let h1=document.createElement("h1")
+            h1.innerText=data.fact
+            main.append(h1)
+        }
+
+     //   fetchFact();
+
+
+    </script>
+</body>
+</html>

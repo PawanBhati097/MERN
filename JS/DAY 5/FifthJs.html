@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //for-loop
+        for(let i=0;i<2;i++){
+            console.log(i);
+        }
+        //while loop
+        let i=5;
+        while(i>=0){
+            console.log(i);
+            i--;
+        }
+        //do-while loop
+        let j=5;
+        do{
+            console.log(j);
+            j--;
+        }while(j>=0);
+        //for of loop
+        let a="Pawan Bhati";
+        for(let ch of a){
+            console.log(ch);
+        }
+        let arr=[10,20,30,40];
+        for(a of arr){
+            console.log(a);
+        }
+
+        //function
+        //1.normal function
+        function greet(){
+            console.log("Hello,Good morning");
+        }
+        greet();
+        //2.parameter and argument function
+        function add(a,b){
+            console.log(a+b);
+        }
+        add(12,12);
+
+        //3.Returning function
+         function sub(a,b){
+            return a-b;
+        }
+        console.log(sub(12,10));
+
+        //4.default parameter function
+        function info(name,city="Noida"){
+            console.log(name,city);
+        }
+        info("Ram");
+        info("SHYAM","DELHI");
+
+        //5.function expression
+        let product=function(a,b){
+            console.log(a*b);
+        }
+        product(10,20);
+        //6. Arrow function
+        let product1=(a,b)=>{
+            console.log(a*b);
+        }
+        product(10,30);
+    </script>
+</body>
+</html>

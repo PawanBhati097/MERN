@@ -1,0 +1,8 @@
+What is Table tag?
+A collection of rows and column is known as table tag.
+
+table tag--> tr tag(table row) ==> td/th tag (table data/table head)
+
+cellspacing: Spaces b/w outer cell & inner cell.
+
+cellpadding : Space b/w cel & content.

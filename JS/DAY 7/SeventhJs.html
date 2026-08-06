@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+            
+    //Object: A data in key & value pair.
+    //{key: value,keys.....}
+
+    let obj={
+        name:"Ram",
+        city:"Noida"
+    }
+    console.log(obj);
+    //method 1 & method 2
+    console.log(obj.name);
+    console.log(obj["city"]);
+
+    //array of objects
+    let arrObj=[
+            {
+                name:"Ansh",
+                role:"user"
+            },
+            {
+                name:"Ram",
+                role:"admin"
+            }, 
+            {
+                name:"Syam",
+                role:"Boss"
+            }
+    ];
+    console.log(arrObj);
+    console.log(arrObj[0]);
+    console.log(arrObj[0].role);
+
+    //objects of objects
+    let newObj={
+        name:"Ram",
+        skills:{
+            skill1:"react",
+            skill2:"express",
+            skill3:"node"
+        }
+    };
+    console.log(newObj.skills.skill1);
+    //Destructuring array & object
+    //in array
+    let newData=["Ayush","Mern","Noida"];
+   // let [name,technology,city]=newData; //Destructuring
+    let [name,...remain]=newData;
+    console.log(name);
+    console.log(remain);
+
+ //   console.log(name,technology,city);
+
+    //in objects : It gets destructure sccording to their keyname
+   let object = {
+    fname: "Satyam",
+    fcity: "Noida"
+};
+
+let {technology,...remain1}=obj;
+console.log(technology);
+console.log(remain1);
+
+let { fname, fcity } = object;  // Destructuring
+console.log(fname, fcity);       // "Satyam Noida"
+
+//deep copy & shallow copy
+let arr=[10,20,30,40,50,[100,200,300]];
+let copyarr=arr;
+
+console.log("copy array :",copyarr);  
+console.log("original array :",arr);
+copyarr[3]=400;
+
+console.log("copy array :",copyarr);
+console.log("original array :",arr);
+//what is shallow copy ?
+//shallow copy duplicates only top-level properties of an object && nested elements pr work nhi krta h
+let copyar=[...arr];
+copyar[3]=40;
+copyar[5][1]=2000;
+
+console.log("copy array :",copyar);
+console.log("original array :",arr);
+
+//What is Deep copy?
+//let copyarrr=structuredClone(arr); //method 1
+let copyarrr=JSON.parse(JSON.stringify(arr));//method 2
+copyarr[3]=400;
+copyarr[5][1]=2000;
+
+console.log("copy array :",copyarrr);
+console.log("original array :",arr);
+//In array
+
+
+</script>
+</body>
+</html>

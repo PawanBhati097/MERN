@@ -1,0 +1,33 @@
+Conditional Statements
+1. if-else
+    if is the staring Statements, here we can use if multiple times.
+
+    else is the ending statement , else is used single time.
+
+    Syntax
+    if(condition){code}
+    else{code}
+
+    What is Template Literal?
+    `statement ${variable/operation}`
+     Check eligibility for voting
+
+2. Switch-Case
+    Here their is one switch and multiple cases.
+   switch case
+        syntax
+        switch(expression)
+        {
+        case "value" :output
+        }
+        1 press print react
+        2 node
+        3 express
+        4 mongodb
+
+Math Functions:
+    i. Pi
+    ii. abs()
+    iii. random
+    iv. ceil
+    v. floor

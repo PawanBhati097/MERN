@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Conditional Statements
+        //i. if-else else
+        //if(condition ){condition is true}
+        //else{condition is false}
+        let age=15;
+        if(age>19){
+            console.log("Eligible");
+        }
+        else if(age>=14&&age<=18){
+            console.log(`Eligible in ${19-age} years`);
+            console.log("Eligible in",19-age,"years");
+            //``template literal
+        }
+        else{
+            console.log("Not Eligible");
+        }
+        // switch case
+        // syntax
+        // switch(expression)
+        // {
+        // case "value" :output
+        // }
+        // 1 press print react
+        // 2 node
+        // 3 express
+        // 4 mongodb
+
+        let caseInput=parseInt(prompt("Enter case input :"));
+        switch(caseInput){
+            case 1: console.log("React");
+            break;
+            case 2: console.log("Node");
+            break;
+            case 3: console.log("Express");
+            break;
+            case 4: console.log("Mongodb");
+            break;
+            default : console.log("Wrong input");
+            break;
+        }
+         // console.log(Math.PI)
+        let pi=Math.PI;
+        console.log(pi);
+        let a=-100;
+        console.log(Math.abs(a));
+        // console.log(Math.floor(pi))
+        let num=10.9;
+        console.log(Math.floor(num));
+
+        // console.log(Math.ceil(pi))
+        let num1=11.1;
+        console.log(Math.ceil(num1));
+
+        // random() : creates the random value from 0 to 1.
+
+        // Creating random value from 1 to 100
+        // let randomNumber=Math.ceil(Math.random()*100)
+        let randomNumber=Math.ceil(Math.random()*100);
+        console.log(randomNumber);
+    </script>
+</body>
+</html>
