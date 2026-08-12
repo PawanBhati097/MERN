@@ -1,0 +1,13 @@
+window is a global object created by browser and link it with js
+
+getElementByTagName gives html collection
+
+querySelector gives nodeList
+
+Feature     	    HTML Collection	                            NodeList
+Returned by	        getElementsBy...()	                        querySelectorAll()
+Live/Dynamic	    ✅ Live (updates automatically)             ❌ Static (doesn't update)
+Array methods	    ❌ No (forEach works in some browsers)	   ✅ Yes (forEach, etc.)
+Index access	    ✅ Yes (collection[index])	               ✅ Yes (list[index])
+Length property	    ✅ Yes	                                   ✅ Yes  
+Contains	        Only element nodes	                        All node types (text, comments, etc.
