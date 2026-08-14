@@ -1,0 +1,16 @@
+Js is a single threaded synchronous language.
+single threaded means one command at a time and synchronous means in synchronous way line by line.
+
+
+Global execution context(stack model)
+
+Web API:
+window object: a global object ,can be seen through console .
+
+accesss to web api is given by browser and also to window object.
+
+eg.  setTimeout,setInterval,DOM API(getElemt by etc),fetch local storage, console.log,location
+
+callback queue //stack should be empty.
+
+microtask queue (fetch : high priority function)
