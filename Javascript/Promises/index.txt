@@ -1,0 +1,8 @@
+Promise:
+3 stages:pending,fullfilled,rejected(internet down,server down,dns down)
+
+JSON vs JS object
+
+JSON doesnt allow function,undefined and it hvae a string format
+JSON is universal object
+JSON understand by c++,python,java,etc
