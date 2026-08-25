@@ -155,9 +155,18 @@
 // user.greet();
 
 
-const button=document.getElementById("first");
+// const button=document.getElementById("first");
 
-button.addEventListener('click',function(){
-    console.log(this);
-})
+// button.addEventListener('click',function(){
+//     console.log(this);
+// })
 
+//this keywor:global scope in node js:{}
+//windows:window object
+
+//function:this keyword ,if somwone envoke the method or function it will point to that
+//Normal function: when noone is invokig it,
+//Non strict :global object for node and browser
+//strict :undefinded
+
+//arrow function:it takes from its lexical environment scope

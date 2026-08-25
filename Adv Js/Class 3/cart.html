@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        padding: 15px 20px;
+    }
+
+    .outerdiv {
+        width: 350px;
+        height: 350px;
+        border: 2px solid black;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0px;
+    }
+
+    .remove {
+        padding: 10px 25px;
+        background-color: red;
+        border-radius: 10px;
+        border: none;
+        font-weight: bolder;
+        color: white;
+    }
+
+    main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    table{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    tr th,td{
+        padding: 10px 30px;
+    }
+</style>
+
+<body>
+    <nav>
+        <h1><a href="third.html">Logo</a></h1>
+        <h1><a href="cart.html">Cart</a></h1>
+    </nav>
+
+    <main>
+
+    </main>
+
+    <footer>
+        <h1>Bill Summary</h1>
+        <table border=1 cellspacing="0" cellpadding=40>
+            <tr class="head">
+                <th>Name</th>
+                <th>Qty</th>
+                <th>Total Price</th>
+            </tr>
+            <tr class="checkout">
+                <th colspan="2">Total Price</th>
+                <th class="tP"></th>
+            </tr>
+        </table>
+    </footer>
+
+    <script>
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+        console.log(cart)
+
+        if (cart.length !== 0) {
+            cart.map((el) => {
+                // console.log(el)
+                let outerdiv = document.createElement("div")
+                let heading = document.createElement("h2")
+                let image = document.createElement("img")
+                let price_qty = document.createElement("div")
+                let price = document.createElement("p")
+                let inc_qty_dec = document.createElement("div")
+                let inc = document.createElement("button")
+                let qty = document.createElement("p")
+                let dec = document.createElement("button")
+                let remove = document.createElement("button")
+
+                heading.innerText = el.title
+                image.src = el.thumbnail
+                price.innerText = `Rs ${Math.ceil(el.price * 94)}/-`
+                qty.innerText = `${el.quantity}`
+                remove.innerText = "Remove From Cart"
+                inc.innerText = "+"
+                dec.innerText = "-"
+
+                outerdiv.classList.add("outerdiv")
+                price_qty.style.display = "flex"
+                price_qty.style.gap = "100px"
+                image.style.width = "250px"
+                remove.classList.add("remove")
+                inc_qty_dec.style.display = "flex"
+                inc_qty_dec.style.gap = "10px"
+
+                inc_qty_dec.append(dec, qty, inc)
+                price_qty.append(price, inc_qty_dec)
+                outerdiv.append(heading, image, price_qty, remove)
+                document.querySelector("main").append(outerdiv)
+
+                remove.addEventListener("click", () => {
+                    let filteredData = cart.filter((ele) => el.id !== ele.id)
+                    console.log(filteredData)
+                    localStorage.setItem("cart", JSON.stringify(filteredData))
+                })
+                if(el.quantity==1){
+                        dec.disabled=true
+                    }
+
+                inc.addEventListener("click", () => {
+                    if(el.quantity==1){
+                        dec.disabled=true
+                    }
+
+                    dec.disabled=false
+                    // let update=
+                    el.quantity += 1
+                    console.log(el.quantity)
+                    qty.innerText = el.quantity
+                    // localStorage.setItem("cart",JSON.stringify(el))
+                })
+
+                dec.addEventListener("click", () => {
+                    if(el.quantity==1){
+                        dec.disabled=true
+                    }
+                    el.quantity -= 1
+                    qty.innerText = el.quantity
+
+                })
+
+                let row=document.createElement("tr")
+                let pname=document.createElement("td")
+                let qtyNo=document.createElement("td")
+                let totalPrice=document.createElement("td")
+                // console.log(pname)
+
+                pname.innerText=el.title
+                qtyNo.innerText=el.quantity
+                totalPrice.innerText=el.quantity*Math.ceil(el.price*94)
+
+                row.append(pname,qtyNo,totalPrice)
+                console.log(row)
+                document.querySelector(".checkout").insertAdjacentElement("beforebegin",row)
+
+                let tP=cart.reduce((acc,el)=>{
+                    acc=acc+(el.quantity*Math.ceil(el.price*94))
+                    return acc
+                },0)
+
+                console.log(tP)
+
+                document.querySelector(".tP").innerText=`Rs ${tP}/-`
+            })
+        }
+        else {
+            let h1 = document.createElement("h1")
+            h1.innerText = "No Item In Cart"
+            document.querySelector("main").append(h1)
+        }
+    </script>
+</body>
+
+</html>
