@@ -1,0 +1,16 @@
+What is JSX ?
+it stands for javascript extensible,where we write javascipt and html together.
+
+In react we make the  components.
+
+Type of componenets:
+-->Class (deprecated)
+--->Functional :Here the name of the componenet ,first letter must be capital
+    function Func_Name(){
+
+    }
+To use that component
+
+Exporting a file.There are two type of exports:
+-->default 
+-->named
