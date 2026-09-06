@@ -1,0 +1,14 @@
+Pillars of react
+Three Pilaars : State,Hook,Props
+
+What is State?
+It means where we manage the value of a component.
+
+What is Hook?
+Special functions(like useState or useEffect ) that let function components use state and lifecycle features without writing class components.
+
+What is Props?
+Transfering data from parent component to child component.
+
+What is conditional Rendering ?
+Ternary Operator 

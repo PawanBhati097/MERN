@@ -1,0 +1,11 @@
+useEffect : To handle the side effects of an application.
+Three criterias:
+    Without Dependency
+    With Empty Array
+    With Dependency
+
+Syntax:
+    useEffect(callback,Dependency)
+
+api fetch
+paginaton

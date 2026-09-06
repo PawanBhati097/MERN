@@ -1,16 +1,25 @@
-What is JSX ?
-it stands for javascript extensible,where we write javascipt and html together.
+What is JSX?
+JSX stands for Javascript Extensible , where we write HTML & JS together.
 
-In react we make the  components.
+In react we make the components.
 
-Type of componenets:
--->Class (deprecated)
---->Functional :Here the name of the componenet ,first letter must be capital
+Type of components:
+--> CLass (deprecated)
+--> FUnctional : Here in the name of component , first letter must be capital.
     function Func_Name(){
 
     }
-To use that component
 
-Exporting a file.There are two type of exports:
--->default 
--->named
+To use that component.
+
+Exporting a file. Their are two type of exports:
+--> default
+--> named
+
+How to call any JS variable in our HTML?
+using {} in our HTML we call our JS.
+
+What is Virtual DOM?
+Virtual DOM is a copy of real DOM where it uses reconcilation and diffing algorthim to create the changes on our pages.
+Reconcilation is a react process that compares two virtual dom trees to find out the minimal changes that it can update the real browser DOM.
+Diffing algorthim is a react algorthim that compares the old & new virtual dom to update the real dom , here the dom is not created on each update it only updates the changes in the dom.
