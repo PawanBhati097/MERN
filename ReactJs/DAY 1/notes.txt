@@ -1,0 +1,13 @@
+Library-
+        GSAP
+        Lenis
+        ReactJs
+Framework
+        -NextJs
+        -Angular
+        -Remix
+
+
+        export two types
+        named : gived some name to the file
+        default
