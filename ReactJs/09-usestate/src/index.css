@@ -1,0 +1,24 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'helvetuca nue';
+}
+html,
+body{
+    height:100%;
+    width:100%;
+}
+
+button{
+    padding: 10px 20px;
+    margin: 20px;
+}
+
+h1{
+   padding: 10px 70px;
+    margin: 20px;
+    background-color: rgb(152, 138, 138);
+    width: fit-content;
+    font-size: 100px; 
+}
