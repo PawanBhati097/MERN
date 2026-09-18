@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
+import Card from './components/card'
 const App = () => {
 
   const [userData, setuserData] = useState([])
@@ -12,44 +13,42 @@ const App = () => {
     console.log(response.data);
 
   }
-  useEffect(function(){
+  useEffect(function () {
     getData()
-  },[index])
+  }, [index])
 
-  let printUserData = <h3 className='text-gray-400 text-xs'></h3>
+  let printUserData = <h3 className='text-gray-400 top-1/2 left-1/2 translate-x-1/2 translate-y-1/2 text-xs'>Loading...</h3>
 
   if (userData.length > 0) {
     printUserData = userData.map(function (elem, idx) {
       return <div key={idx}>
-        <a href={elem.url}>
-          <div className='h-40 w-44 overflow-hidden bg-white rounded-xl'>
-            <img className='h-full w-full object-cover' src={elem.download_url} alt="" />
-          </div>
-          <h2 className='font-bold text-xl'>{elem.author}</h2>
-        </a>
+       <Card elem={elem}/>
       </div>
     })
   }
 
   return (
     <div className='bg-black h-screen overflow-auto text-white'>
-      <h1 className='fixed text-6xl'>{index}</h1>
-      <div className='flex flex-wrap gap-4 p-2'>
+      <div className='flex h-{82%} flex-wrap gap-4 p-2'>
         {printUserData}
       </div>
       <div className='flex justify-center gap-6 items-center p-4'>
-        <button 
-        onClick={()=>{
-          if(index>1){
-            setIndex(index-1)
-          }
-        }}
-        className='bg-amber-400 text-sm cursor-pointer active:scale-95 text-black rounded px-4 py-2 font-semibold'>Prev</button>
         <button
-        onClick={()=>{
-          setIndex(index+1)
-        }}
-        className='bg-amber-400 text-sm cursor-pointer active:scale-95 text-black rounded px-4 py-2 font-semibold'>Next</button>
+          onClick={() => {
+            if (index > 1) {
+              setIndex(index - 1)
+              setuserData([])
+            }
+          }}
+          className='bg-amber-400 text-sm cursor-pointer active:scale-95 text-black rounded px-4 py-2 font-semibold'>Prev</button>
+        <h4>Page:{index}</h4>
+        <button
+          onClick={() => {
+            setIndex(index + 1)
+            setuserData([])
+
+          }}
+          className='bg-amber-400 text-sm cursor-pointer active:scale-95 text-black rounded px-4 py-2 font-semibold'>Next</button>
       </div>
     </div>
   )
